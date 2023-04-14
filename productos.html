@@ -9,6 +9,7 @@
     <!-- link CSS -->
     
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/footer.css">
     <!-- Fuentes Google Poppins -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -41,7 +42,7 @@
          </div>
         </div>
      </header>
-     <div class="social-bar">
+     <div class="social-bar" id="miDiv">
          <a href="#" class="icon facebook"><i class="fa fa-facebook"></i></a> 
          <a href="#" class="icon twitter"><i class="fa fa-twitter"></i></a> 
          <a href="#" class="icon instagram"><i class="fa fa-instagram"></i></a> 
@@ -52,39 +53,32 @@
         <h1 class="titulo">PRODUCTOS</h1>
     </main>
     <!-- Final Contenido Principal -->
-    <footer>
-        <div class="container-foother">
-          <div class="footer-row">
-            <div class="footer-col">
-              <h3>Sobre nosotros</h3>
-              <p>Somos una empresa líder en la industria, comprometidos con la excelencia en el servicio y la satisfacción del cliente.</p>
-            </div>
-            <div class="footer-col">
-              <h3>Contáctanos</h3>
-              <ul class="contact-info">
-                <li><i class="fa fa-map-marker"></i> 123 Main St, Anytown USA</li>
-                <li><i class="fa fa-phone"></i> +1 234 567 8901</li>
-                <li><i class="fa fa-envelope"></i> info@example.com</li>
-              </ul>
-            </div>
-            <div class="footer-col">
-              <h3>Síguenos</h3>
-              <ul class="social-media">
-                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-              </ul>
-            </div>
+          <!-- Foother -->
+   <footer>
+    <div class="footer-container">
+        <div class="footer-social-media">
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+            <a href="#"><i class="fa fa-instagram"></i></a>
+            <a href="#"><i class="fa fa-youtube"></i></a>
           </div>
-          <div class="footer-row">
-            <div class="footer-col">
-              <hr>
-              <p>&copy; 2023 Todos los derechos reservados.</p>
-            </div>
-          </div>
-        </div>
-      </footer>
+      <div class="subscribe">
+        <h3>Suscríbete a nuestro boletín</h3>
+        <form>
+          <input type="email" placeholder="Tu correo electrónico">
+          <button type="submit">Suscribirse</button>
+        </form>
+      </div>
+      <div class="contact-info">
+        <h3>Contacto</h3>
+        <p><i class="fa fa-phone"></i> Teléfono: 123-456-7890</p>
+        <p><i class="fa fa-envelope"></i> Email: info@gezer.com</p>
+        <p><i class="fa fa-map-marker"></i> Dirección: Calle Falsa 123, Ciudad Ficticia</p>
+      </div>
+     
+      
+    </div>
+  </footer>           
       
       
      <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>

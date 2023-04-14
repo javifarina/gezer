@@ -298,7 +298,7 @@ input[type=text], textarea {
   margin-bottom: 16px; /* Añadimos margen inferior para separar los inputs */
 }
 
-input[type=submit] {
+.g-recaptcha {
   background-color: #d46407;
   color: white;
   padding: 12px 0; /* Cambiamos el padding para que cubra todo el ancho */
@@ -309,10 +309,16 @@ input[type=submit] {
   margin-top: 16px; /* Añadimos margen superior para separar el botón */
 }
 
-input[type=submit]:hover {
+.g-recaptcha:hover {
   background-color: #2c2825;
 }
 
 h2 {
   margin-top: 0; /* Eliminamos el margen superior para que la cabecera se sitúe más arriba */
+}
+/* media query apaga social bar */
+@media (max-width: 760px) {
+  #miDiv {
+    display: none;
+  }
 }

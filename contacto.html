@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./css/normalize.css">
     <!-- link CSS -->
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/footer.css">
     <!-- Fuentes Google Poppins -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -40,7 +41,7 @@
          </div>
         </div>
      </header>
-     <div class="social-bar">
+     <div class="social-bar" id="miDiv">
          <a href="#" class="icon facebook"><i class="fa fa-facebook"></i></a> 
          <a href="#" class="icon twitter"><i class="fa fa-twitter"></i></a> 
          <a href="#" class="icon instagram"><i class="fa fa-instagram"></i></a> 
@@ -60,24 +61,49 @@
                 <label for="email">Email:</label>
                 <input type="text" id="email" name="email" placeholder="Ingresa tu email">
         
-                <label for="asunto">Asunto:</label>
-                <input type="text" id="asunto" name="asunto" placeholder="Ingresa el asunto">
+                <label for="Telefono">Teléfono:</label>
+                <input type="text" id="telefono" name="telefono" placeholder="Ingresa el teléfono">
         
                 <label for="mensaje">Mensaje:</label>
                 <textarea id="mensaje" name="mensaje" placeholder="Ingresa tu mensaje"></textarea>
-                <div class="g-recaptcha" data-sitekey="6Ld_Ch4lAAAAAHgB70H7dpGUqZlgNak9Ftv6WeCV"></div>
-                <input type="submit" value="Enviar" >
+               
+                
                 <button class="g-recaptcha"
-data-sitekey="6Ld_Ch4lAAAAAHgB70H7dpGUqZlgNak9Ftv6WeCV"
-data-callback='onSubmit'
-data-action='submit'>Submit</button>
+                        data-sitekey="6Ld_Ch4lAAAAAHgB70H7dpGUqZlgNak9Ftv6WeCV"
+                        data-callback='onSubmit'
+                        data-action='submit'>Enviar</button>
             </form>
         </div>
     </div>
      </div>
     </main>
     <!-- Final Contenido Principal -->
-                
+    <!-- footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-social-media">
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-instagram"></i></a>
+                <a href="#"><i class="fa fa-youtube"></i></a>
+              </div>
+          <div class="subscribe">
+            <h3>Suscríbete a nuestro boletín</h3>
+            <form>
+              <input type="email" placeholder="Tu correo electrónico">
+              <button type="submit">Suscribirse</button>
+            </form>
+          </div>
+          <div class="contact-info">
+            <h3>Contacto</h3>
+            <p><i class="fa fa-phone"></i> Teléfono: 123-456-7890</p>
+            <p><i class="fa fa-envelope"></i> Email: info@gezer.com</p>
+            <p><i class="fa fa-map-marker"></i> Dirección: Calle Falsa 123, Ciudad Ficticia</p>
+          </div>
+         
+          
+        </div>
+      </footer>           
      
     
     <!-- captcha -->
