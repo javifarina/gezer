@@ -1,178 +1,56 @@
-  /* slider */
-  *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+.slider {
+  position: relative;
 }
 
-.serLateral{
-    background:#e4751a03 ;
-    width: 20px;
-    height: 20px;
-}
-#container-slider
-{
-    
-    position: relative;
-    display: block;
-    width: 100%;
-}
-#slider {
-    width: 80%;
-    margin-right: auto;
-    margin-left: auto;
-    position: relative;
-    display: block;
-    width: 100%;
-    height:60vh;
-    min-height: 200px;
-}
-#slider li {
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    position: absolute !important;
-    top: 0 !important;
-    left: 0 !important;
-    width: 100%;
-    height: 100%;
-    display: block;
-    -webkit-transition: opacity 1s;
-    -moz-transition: opacity 1s;
-    -ms-transition: opacity 1s;
-    -o-transition: opacity 1s;
-    transition: opacity 1s;
-    z-index: -1;
-    opacity: 0;
-}
-#container-slider .arrowPrev, #container-slider .arrowNext{
-    font-size: 30pt;
-    color:#e4751a03;
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    left: 50px;
-    z-index: 2; 
-}
-#container-slider .arrowNext {
-    left: initial;
-    right: 50px !important;
-}
-.content_slider{
-    padding: 15px 30px;
-    color: #FFF;
-    width: 100%;
-    height: 100%;
-}
-.content_slider div{
-    text-align: center;
-}
-.content_slider h2 {
-    font-family: 'Poppins';
-    font-size: 30pt;
-    letter-spacing: 0.5px;
-    text-transform: uppercase;
-    margin-bottom: 20px;
-    text-align: start;
-}
-.content_slider p {
-    font-size: 15pt;
-    font-family: 'Poppins';
-    color: #FFF;
-    margin-bottom: 20px;
-}
-#slider li .content_slider{
-    background: rgba(239, 235, 235, 0.1);
-    padding: 10px 125px;
-}
-.content_slider{
-    display: -webkit-flex;
-    display: -moz-flex;
-    display: -ms-flex;
-    display: -o-flex;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.btnSlider{
-    color: #FFF;
-    font-size: 15pt;
-    font-family: 'Poppins';
-    letter-spacing: 1px;
-    padding: 10px 50px;
-    border: 1px solid #CCC;
-    background: #302e2d;
-    border-radius: 31px;
-    text-decoration: none;
-    transition: .5s all;
-}
-.btnSlider:hover{
-    background: #111;
-    border: 1px solid #111;
-}
-.listslider {
-    position: absolute;
-    display: -webkit-flex;
-    display: -moz-flex;
-    display: -ms-flex;
-    display: -o-flex;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    left: 50%;
-    bottom: 5%;
-    list-style: none;
-    z-index: 2;
-    transform: translateX(-50%);
-}
-.listslider li {
-    border-radius: 50%;
-    width: 10px;
-    height: 10px;
-    cursor: pointer;
-    margin: 0 5px;
-}
-.listslider li a {
-    background: #CCC;
-    border-radius: 50%;
-    width: 100%;
-    height: 100%;
-    display: block;
-}
-.item-select-slid {
-    background: #FFF  !important;
+.slides {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
 }
 
-@media screen and (max-width: 460px){
-	.content_slider h2 {
-	    font-size: 15pt !important;
-	}
-	.content_slider p {
-	    font-size: 12pt !important;
-	}
-	#container-slider .arrowPrev, #container-slider .arrowNext{
-		font-size: 20pt;
-	}
-	#container-slider .arrowPrev{
-		left: 15px;
-	}
-	#container-slider .arrowNext{
-		right: 15px !important;
-	}
-	#slider{
-		height: 400px;
-		min-height: 400px;
-	}
-	#slider li .content_slider{
-		padding: 10px 35px;
-	}
-	.btnSlider{
-		padding: 10px 30px;
-    	font-size: 10pt;
-	}
-    .box-services{
-
-    }
-
+.slides::-webkit-scrollbar {
+  width: 10px;
 }
-  
+
+.slides::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.slides::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 5px;
+}
+
+.slides img {
+  scroll-snap-align: start;
+  width: 100%;
+  height: auto;
+}
+
+.dots {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+.dot {
+  height: 10px;
+  width: 10px;
+  margin: 0 5px;
+  background-color: #fff;
+  border-radius: 50%;
+  display: inline-block;
+  opacity: 0.5;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  transition: opacity 0.5s ease;
+}
+
+.dot.active {
+  opacity: 1;
+}
