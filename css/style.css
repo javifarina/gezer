@@ -500,6 +500,9 @@ background: white;
 .titulo{
   margin-top: 10px;
 }
+.cardBodyEquipo{
+  margin-top: 10px;
+}
 .nuestroEquipo{
   display: flex;
   flex-wrap: wrap;
@@ -512,10 +515,33 @@ background: white;
   flex-direction:column;
   width: 17em;
   margin-right: 5px;
+  text-align: center;
+  align-items: center;
 }
 .cardImagenEqui{
-  width: 200px;
-  height: 200px;
+  width: 150px;
+  height: 150px;
   border-radius: 100px;
   border: 5px solid #d46407;
+
+}
+.nombre{
+  text-align: center;
+  color: #d46407;
+  font-size: 1.6em;
+}
+/* contactanos */
+.contactanos{
+
+}
+/* informacion de contacto */
+.infoContacto{
+  display: flex; 
+  flex-direction:row;
+  
+  background-color: #d46407;
+  align-items: baseline;
+}
+.infoBody{
+  
 }
