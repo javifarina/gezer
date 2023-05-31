@@ -1,0 +1,266 @@
+html {
+    box-sizing: border-box;
+}
+*,*::before, *:after{
+    box-sizing: inherit;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    
+}
+
+.container {  display: grid;
+  grid-template-columns: 0.3fr 2.4fr 0.3fr;
+  grid-template-rows: 0.4fr 2fr 0.1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "Header Header Header"
+    ". Main ."
+    "Foother Foother Foother";
+}
+
+.Header {  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 0.9fr 1.1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    ". Logo ."
+    ". Logo ."
+    "NavBar NavBar NavBar";
+  grid-area: Header;
+}
+
+.NavBar { grid-area: NavBar; }
+
+.Logo { grid-area: Logo; }
+
+.Main {  display: grid;
+  grid-template-columns: 1.5fr 0.1fr 1.4fr;
+  grid-template-rows: 0.5fr 0.9fr 1.6fr;
+  grid-auto-rows: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "FotoTitulo FotoTitulo FotoTitulo"
+    "section1 section1 section1"
+    "section1 section1 section1";
+  grid-area: Main;
+}
+
+.FotoTitulo { grid-area: FotoTitulo; }
+
+.section1 {  display: grid;
+  grid-template-columns: 0.6fr 1.4fr 1fr;
+  grid-template-rows: 1.1fr 0.9fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "Nosotros Nosotros Nosotros"
+    "valores valores valores"
+    "section2 section2 section2";
+  grid-area: section1;
+}
+
+.valores {  display: grid;
+  grid-template-columns: 0.1fr 2.9fr 0.1fr;
+  grid-template-rows: 1fr 2.1fr 0.1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    ". Grilla ."
+    ". Grilla ."
+    ". . .";
+  grid-area: valores;
+}
+
+.Grilla {  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "grillaTitulo grillaTitulo grillaTitulo"
+    "g11 g21 g31"
+    "g12 g22 g32";
+  grid-area: Grilla;
+}
+
+.grillaTitulo { grid-area: grillaTitulo; }
+
+.g11 {  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1.4fr 0.6fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    ". . ."
+    ". . ."
+    ". . .";
+  grid-area: g11;
+}
+
+.g12 { grid-area: g12; }
+
+.g21 { grid-area: g21; }
+
+.g22 { grid-area: g22; }
+
+.g31 { grid-area: g31; }
+
+.g32 { grid-area: g32; }
+
+.Nosotros {  display: grid;
+  grid-template-columns: 1.5fr 0.1fr 1.4fr;
+  grid-template-rows: 1.2fr 0.8fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "textoCol2 . imageCol2"
+    "textoCol2 . imageCol2"
+    "textoCol2 . imageCol2";
+  grid-area: Nosotros;
+}
+
+.textoCol2 { grid-area: textoCol2; }
+
+.imageCol2 { grid-area: imageCol2; }
+
+.section2 {  display: grid;
+  grid-template-columns: 0.9fr 1.1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "empresa empresa empresa"
+    "equipo equipo equipo"
+    "Contacto Contacto Contacto";
+  grid-area: section2;
+}
+
+.empresa { grid-area: empresa; }
+
+.equipo { grid-area: equipo; }
+
+.Contacto { grid-area: Contacto; }
+
+.Foother { grid-area: Foother; }
+
+  
+  .Header{
+    background-color:#2c2825;
+    width: auto;
+    height: 300px;
+  }
+  .Logo{
+    background-image: url("../img/LOGO/LOGO--GEZER---PNG-BLANCO.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 12.75em;
+  }
+
+  /* NavBar */
+
+nav ul {
+    background: #2c2825;
+    text-align: center;
+    list-style: none;
+    overflow: hidden;
+    margin: 0;
+  
+  }
+  
+  ul li {
+    display: inline-block;
+    padding: 20px;
+    transition: all ease-in-out 250ms;
+  }
+  .menu a {
+    position: relative;
+    display: block;
+    padding: 5px;
+  }
+ .menu a::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(to right, #d97510, #d6782b, #d46407);
+    z-index: 1;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .menu a:hover::before {
+    transform: scaleX(1);
+    }
+  
+  ul li a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .hide {
+    padding: 16px;
+    font-size: 22px;
+    background: #2c2825;
+    color: white;
+    cursor: pointer;
+    display: none;
+  }
+/* ANIMATIONS Navbar
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+  .menu[data-animation="center"] a::before {
+    transform-origin: center;
+  }
+  
+
+  /* Media Query Navbar  */
+  @media (max-width: 768px) {
+    ul li {
+      width: 100%;
+      padding: 15px;
+      text-align: center;
+    }
+  
+    .hide {
+      display: block;
+    }
+  
+    nav ul {
+    display: none;
+  
+    }
+  }
+/* Titulos */
+.FotoTitulo{
+    background-image: url("../img/SLIDERS/8.0-SLIDER---gezer.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 12.8em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color:white;
+}
+/*Objetivos*/
+.section1{
+  background-color: #2c2825;
+}
+h2{
+  color: #d46407;
+  text-align: center;
+}
+
+.icon{
+  width:1px;
+  height:0.1px;
+}
