@@ -7,7 +7,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Gezer</title>
   <link rel="stylesheet" href="./css/normalize.css" />
-
   <!-- link CSS -->
 
   <link rel="stylesheet" href="./css/style.css" />
@@ -25,9 +24,10 @@
 <body>
 
   <body>
+    <!-- HEADER -->
     <header class="bg-header">
       <div class="bg-navbar">
-        <div class="container">
+        <div class="container-fluid">
           <div class="navbar">
             <a href="/" class="navar-brand">
               <img class="img" src="./img/LOGO/LOGO--GEZER---PNG-BLANCO.png" alt="" />
@@ -35,7 +35,7 @@
             <nav>
               <ul class="menu" data-animation="center">
                 <li><a href="./index.html">INICIO</a></li>
-                <li><a href="./nosotros.html">QUIENES SOMOS</a></li>
+                <li><a href="./nosotros.html">NOSOTRROS</a></li>
                 <li><a href="./productos.html">PRODUCTOS</a></li>
                 <li><a href="./servicios.html">SERVICIOS</a></li>
                 <li><a href="./contacto.html">CONTACTO</a></li>
@@ -55,44 +55,101 @@
       <a href="#" class="icon youtube"><i class="fa fa-youtube"></i></a>
     </div>
     <!-- Contenido Principal -->
-    <main class="fondoGris">
-
-      <!-- <div class="encabezado_interior">
-        <img src="./img/SLIDERS/8.0-SLIDER---gezer.jpg" alt="" />
-      </div> -->
-     
-
-      <h1 class="tituloPrincipal">OBJETIVOS</h1>
-      <!-- <hr class="line"> -->
-      <div class="containerInt">
-        <div class="col1">
-          <h3 class="subtitulos">MISIÓN:</h3>
-          <p class="parrafosDescriptivo">
-            Como empresa, tenemos la misión de proporcionar productos y
-            soluciones ortopédicas de alta calidad y accesibles para mejorar
-            la calidad de vida de nuestros clientes y sus familias
-          </p>
-          <h3 class="subtitulos">VISIÓN:</h3>
-          <p class="parrafosDescriptivo">
-            Ser líderes en el mercado de productos ortopédicos, en especial
-            plantillas ortopédicas, a nivel regional y nacional, siendo
-            reconocidos por la excelencia en el servicio al cliente y la
-            calidad de nuestros productos.
-          </p>
-          <p class="parrafosDescriptivo">
-            Además queremos ser una empresa en constante crecimiento,
-            ofreciendo siempre lo mejor en tecnología e innovación para
-            mejorar la vida de las personas
-          </p>
+    <main>
+      <section class="container-fluid">
+        <div class="tituloImagen">
+          <h1 class="titulo-h1-gren">SERVICIOS</h1>
+          <img class="estamp" src="../img/SLIDERS/6.0-SLIDER---gezer.jpg" alt="" />
         </div>
-        <div class="col2"></div>
+      </section>
+      <section class="container-fluid">
+        <div class="content badground-blank">
+            <div class="textCol">
+                  <h3 class="titulo-h3">QUE OFRECEMOS</h3>
+                  <div class="timeline-item" date-is='ASESORAMIENTO'></div>
+                  <div class="timeline-item" date-is='SEGUIMIENTO'></div>
+                  <div class="timeline-item" date-is='PRESUPUESTO SIN CARGO'></div>
+                  <div class="timeline-item" date-is='CONTROL'></div>
+            </div>
+          <div class="imgCol">
+            <img src="../img/FONDO/4.5-FONDO.png" alt="">
+          </div>
+        <div class="textCol"></div>
       </div>
+      </section>
+      <section class="container-fluid">
+        <div class="banda-green"></div>
+        <section class="container-fluid">
+          <div class="tituloImagen">
+            <h1 class="titulo-h1-gren"><img class="comillas" src="./img/ICONOS/iconmonstr-quote-1.svg" alt="">
+            </h1>
+            <div class="imgCol3">
+
+              <div class="frase">
+
+                <p>‘El cuerpo humano es la
+                  mejor imagen del alma
+                  humana, mantenlo
+                  saludable’. - Tony Robbins</p>
+              </div>
+            </div>
 
 
+            <img class="estamp amplit" src="../img/FONDO/4.3-FONDO.jpg" alt="" />
+          </div>
+          <section>
+            <section class="container-fluid">
+              <div class="contactanos tituloImagen">
+                <img class="estamp" src="./img/FONDO/4.4-FONDO.jpg" alt="">
+                <h1 class="titulo-h1">Contáctenos</h1>
+              </div>
+              <div class="infoContacto">
+                <div class="llamanos">
+                  <div class="infoBody">
+                    <img src="./img/ICONOS/telefono.svg" alt="">
+                    <p>LLÁMANOS</p>
+                  </div>
+                  <div class="direccion">
+                    <p>54 9 362 424-3747</p>
+                  </div>
+                </div>
+                <div class="vertical-bar"></div>
+                <div class="llamanos">
+                  <div class="infoBody">
+                    <img src="./img/ICONOS/llamadas.svg" alt="">
+                    <p>ESCRÍBENOS</p>
+                  </div>
+                  <div class="direccion">
+                    <p>ingresos@ortopediagezer.com.ar</p>
+                  </div>
+                </div>
+                <div class="vertical-bar"></div>
+                <div class="llamanos">
+                  <div class="infoBody">
+                    <img src="./img/ICONOS/reloj.svg" alt="">
+                    <p>HORARIO</p>
+                  </div>
+                  <div class="direccion">
+                    <p>Lun -Vie: 08:00 - 13:00 16:00 - 20:00 hs.</p>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section class="container-fluid">
+              <div class="tituloImagen">
+                <img class="fondo estamp" src="./img/SLIDERS/7.1-FONDO---contacto.png" alt="">
+                <img class="map" src="./img/map.png" alt="">
+              </div>
+
+            </section>
     </main>
     <!-- Final Contenido Principal -->
     <!-- Foother -->
-    <footer></footer>
+    <footer class="container-fluid">
+      <div class="pie">
+        <p> &copy; Gezer Ortopedia. Reservados todos los derechos.</p>
+      </div>
+    </footer>
 
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
     <script src="./js/slider.js"></script>
