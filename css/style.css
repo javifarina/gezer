@@ -198,6 +198,76 @@ ul li a {
 .social-bar a:hover {
   opacity: 0.8;
 }
+/* Inicio  Slider */
+/* ... (same as before) ... */
+.slider {
+  width: 100%;
+  /* max-width: 1244px; */
+  overflow: hidden;
+  position: relative;
+}
+
+.slide {
+  width: 100%;
+  display: none;
+}
+
+.slide img {
+  width: 100%;
+  height: auto;
+}
+
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+.slide.active {
+  display: block;
+}
+.slider-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.prev, .next {
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.slider-indicators {
+  display: flex;
+  justify-content: center;
+  margin-top: -70px;
+}
+
+.indicator {
+  width: 15px;
+  height: 15px;
+  background-color: #f2f2f2;
+  border-radius: 50% ;
+  margin: 0 5px;
+  cursor: pointer;
+  border: solid ;
+}
+
+.indicator.active {
+  background-color: #333;
+}
+
 
 /* fin Slider */
 
@@ -273,6 +343,21 @@ h2 {
   margin: 0 auto;
   object-fit: cover;
 }
+.estampSlaider {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 30em;
+  overflow: hidden;
+  max-width: 100%;
+  display: block;
+  margin: 0 auto;
+  /* object-fit: cover; */
+}
+
+
+
 .amplit{
   height: 35em;
 }
@@ -297,9 +382,31 @@ height: 3em;
   font-style: italic;
   width: 10em;
 }
+.descripPrincipal{
+  position: absolute;
+  font-size: 2.5em;
+  font-weight: bold;
+  text-align: end;
+  color:#333;
+  font-style:calc(2*2);
+  width: 10em;
+  top: 3em;
+  left: 5em;
+}
+.color-fuente{
+  color: #000000;
+  font-style: italic;
+  font-weight: 700;
+  text-align: center;
+}
+.color-bajo-fuente{
+  color:#d46407;
+  font-style: italic;
+  font-weight: 700;
+  text-align: start;
+}
 .block{
-  display:flex
-  
+  display:flex 
 }
 
 
@@ -412,7 +519,10 @@ hr{
   width: 100%;
   text-align: center;
 }
-
+.backCenter{
+  background-color: #f2f2f2;
+  align-items: center;
+}
 
 /* .line{
   width: 800px;

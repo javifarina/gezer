@@ -1,50 +1,69 @@
-if(document.querySelector('#container-slider')){
-    setInterval('fntExecuteSlide("next")',5000);
- }
- //------------------------------ LIST SLIDER -------------------------
- if(document.querySelector('.listslider')){
-    let link = document.querySelectorAll(".listslider li a");
-    link.forEach(function(link) {
-       link.addEventListener('click', function(e){
-          e.preventDefault();
-          let item = this.getAttribute('itlist');
-          let arrItem = item.split("_");
-          fntExecuteSlide(arrItem[1]);
-          return false;
-       });
-     });
- }
- 
- function fntExecuteSlide(side){
-     let parentTarget = document.getElementById('slider');
-     let elements = parentTarget.getElementsByTagName('li');
-     let curElement, nextElement;
- 
-     for(var i=0; i<elements.length;i++){
- 
-         if(elements[i].style.opacity==1){
-             curElement = i;
-             break;
-         }
-     }
-     if(side == 'prev' || side == 'next'){
- 
-         if(side=="prev"){
-             nextElement = (curElement == 0)?elements.length -1:curElement -1;
-         }else{
-             nextElement = (curElement == elements.length -1)?0:curElement +1;
-         }
-     }else{
-         nextElement = side;
-         side = (curElement > nextElement)?'prev':'next';
- 
-     }
-     //RESALTA LOS PUNTOS
-     let elementSel = document.getElementsByClassName("listslider")[0].getElementsByTagName("a");
-     elementSel[curElement].classList.remove("item-select-slid");
-     elementSel[nextElement].classList.add("item-select-slid");
-     elements[curElement].style.opacity=0;
-     elements[curElement].style.zIndex =0;
-     elements[nextElement].style.opacity=1;
-     elements[nextElement].style.zIndex =1;
- }
+
+const slides = document.querySelectorAll(".slide");
+const prevButton = document.querySelector(".prev");
+const nextButton = document.querySelector(".next");
+const indicators = document.querySelectorAll(".indicator");
+
+let currentSlide = 0;
+let intervalId;
+
+function showSlide(index) {
+  slides.forEach((slide, i) => {
+    if (i === index) {
+      slide.classList.add("active");
+    } else {
+      slide.classList.remove("active");
+    }
+  });
+}
+
+function prevSlide() {
+  currentSlide--;
+  if (currentSlide < 0) {
+    currentSlide = slides.length - 1;
+  }
+  showSlide(currentSlide);
+}
+
+function nextSlide() {
+  currentSlide++;
+  if (currentSlide >= slides.length) {
+    currentSlide = 0;
+  }
+  showSlide(currentSlide);
+}
+
+function updateIndicators(index) {
+  indicators.forEach((indicator, i) => {
+    if (i === index) {
+      indicator.classList.add("active");
+    } else {
+      indicator.classList.remove("active");
+    }
+  });
+}
+
+
+prevButton.addEventListener("click", prevSlide);
+nextButton.addEventListener("click", nextSlide);
+indicators.forEach((indicator, index) => {
+  indicator.addEventListener("click", () => {
+    currentSlide = index;
+    showSlide(currentSlide);
+    updateIndicators(currentSlide);
+  });
+});
+
+function startAutoSlide() {
+  intervalId = setInterval(() => {
+    nextSlide();
+  }, 6000); // Change slide every 3 seconds
+}
+
+function stopAutoSlide() {
+  clearInterval(intervalId);
+}
+
+startAutoSlide();
+
+showSlide(currentSlide);
