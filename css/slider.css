@@ -1,0 +1,56 @@
+.slider {
+  position: relative;
+}
+
+.slides {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+}
+
+.slides::-webkit-scrollbar {
+  width: 10px;
+}
+
+.slides::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.slides::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 5px;
+}
+
+.slides img {
+  scroll-snap-align: start;
+  width: 100%;
+  height: auto;
+}
+
+.dots {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+.dot {
+  height: 10px;
+  width: 10px;
+  margin: 0 5px;
+  background-color: #fff;
+  border-radius: 50%;
+  display: inline-block;
+  opacity: 0.5;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  transition: opacity 0.5s ease;
+}
+
+.dot.active {
+  opacity: 1;
+}
